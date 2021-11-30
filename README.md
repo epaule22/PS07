@@ -54,7 +54,8 @@ You can also embed plots, for example:
 
 It turns out, if you try to plot by x = date, that Presidents Truman,
 Eisenhower, Kennedy, and Johnson all gave speeches through 2068, so I
-organized by number of presidency instead.
+organized by number of presidency instead, such that Truman = 33,
+Eisenhower = 34… Obama = 44.
 
 Note that the `echo = FALSE` parameter was added to the code chunk to
 prevent printing of the R code that generated the plot.
