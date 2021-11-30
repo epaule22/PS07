@@ -1,0 +1,42 @@
+---
+title: "Em's First README"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## A GitHub Document of my Very Own!
+
+This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+
+## Wow! I Can't Believe I Can Include Code!
+
+You can include R code in the document as follows:
+
+```{r}
+library(tidyverse)
+library(fivethirtyeight)
+summary(pres_commencement)
+```
+
+## You Thought You'd Seen the End of Me? It's ggplot
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+ggplot(pres_commencement, aes(x= pres)) +geom_histogram(fill = "darkred",
+                                                        color = "white",
+                                                        bins = 11
+                                                        ) +
+  scale_x_continuous(breaks = seq(33, 44, 1)) +
+  labs(title = "How Often Do Sitting Presidents Give Commencement Speeches?",
+       x = "President",
+       y =  "Count"
+       )
+```
+
+It turns out, if you try to plot by x = date, that Presidents Truman, Eisenhower, Kennedy, and Johnson all gave speeches through 2068, so I organized by number of presidency instead. 
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
